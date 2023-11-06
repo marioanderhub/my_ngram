@@ -4,7 +4,8 @@
 
 void fill_array(int *ngram, char *str) {
     for (int i = 0; str[i] != '\0'; i++) {
-        ngram[(int) str[i]] += 1;
+        if (str[i] != '"')
+            ngram[(int) str[i]] += 1;
     }
 }
 
