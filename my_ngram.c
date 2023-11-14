@@ -1,6 +1,4 @@
-#include <stdio.h>
-
-#define MAX_ARRAY_SIZE 128
+#include "my_ngram.h"
 
 void fill_array(int *ngram, char *str) {
     for (int i = 0; str[i] != '\0'; i++) {
@@ -12,7 +10,7 @@ void fill_array(int *ngram, char *str) {
 void print_array(int *ngram, int size) {
     for (int i = 0; i < size; i++) {
             if (ngram[i] != 0)
-                printf("%c: %d\n", i, ngram[i]);
+                printf("%c:%d\n", i, ngram[i]);
         }
 }
 
